@@ -1,61 +1,29 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Pessoa =sequelize.define('Pessoa',{
-
-        IdPessoa:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-        },
-        NoPessoa:{
-            type:sequelize.STRING(60),
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,60],
-                    msg:"O nome da pessoa deve ter entre 1 e 60 caracteres. Favor verificar!"
-                }
-              }
-          
-        },
-        CPF:{
-            type:Sequelize.STRING(11),
-            allowNull:false,
-            unique:true,
-            len:{
-              args:[11,11],
-              msg:"O CPF, deve ser um CPF válido, sendo inserido apenas por números. Favor verificar."
-            }
-          },
-    
-          Email:{
-            type:Sequelize.STRING(80),
-            allowNull:false,
-            unique:true,
-            len:{
-              args:[10,80],
-              msg:"O email, deve ser um email válido com no máximo de 80 caracteres. Favor verificar"
-            }
-          },
+class Pessoa extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        NoPessoa: Sequelize.STRING,
+        CPF:Sequelize.STRING,
+        Email:Sequelize.STRING,
+        Sexo:Sequelize.TINYINT
         
-          Sexo:{
-            allowNull:false
-          },
+      },
+      {
+        sequelize,
+      }
+    );
 
-    });
+  }
 
-    Pessoa.associate=Models=>{
-
-        Pessoa.belongsTo(Models.Setor);
-        Pessoa.belongsTo(Models.Cargo);
-        Pessoa.hasOne(Models.Usuario);
-
-    };
-        
-    return Pessoa;
+  static associate(models) {
+    this.belongsTo(models.Setor,{foreignKey:'CodSetor',as:'Setor'});
+    this.belongsTo(models.Cargo,{foreignKey:'CodCargo',as:'Cargo'});
+    this.hasOne(models.Usuario)
+  }
 
 }
 
-
+export default Pessoa;
 

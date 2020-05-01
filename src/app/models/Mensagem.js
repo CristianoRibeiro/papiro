@@ -1,47 +1,26 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Mensagem=sequelize.define('Mensagem',{
+class Mensagem extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        DsMensagem: Sequelize.STRING,
+        UP:Sequelize.INTEGER,
+        CdMsgPai:Sequelize.INTEGER
+      },
+      {
+        sequelize,
+      }
+    );
 
-        IdMensagem:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-        },
-        DsMensagem:{
-            type:sequelize.STRING(400),
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,400],
-                    msg:"O aviso deve ter entre 1 e 400 caracteres. Favor verificar!"
-                }
-              }
-          
-        },
+  }
 
-        UP:{
-            type:sequelize.INTEGER,
-            allowNull:true,
-            defaultValue:0
-        },
-        CdMsgPai:{
-            type:sequelize.INTEGER,
-            allowNull:true
-            
-        }
+  static associate(models) {
+    this.belongsTo(models.Usuario,{foreignKey:'CodUsuario',as:'Usuario'});
 
-    });
-
-    Mensagem.associate=Models=>{
-
-        Mensagem.belongsTo(Models.Usuario);
-
-    };
-        
-    return Mensagem;
-
+  }
 }
 
+export default Mensagem;
 
 

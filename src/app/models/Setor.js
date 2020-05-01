@@ -1,37 +1,23 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Setor=sequelize.define('Setor',{
+class Setor extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        DsSetor: Sequelize.STRING
+      },
+      {
+        sequelize,
+      }
+    );
 
-        IdSetor:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-            
-        },
-        DsSetor:{
-            type:sequelize.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,60],
-                    msg:"A descrição de Setor deve ter entre 1 e 60 caracteres. Favor verificar!"
-                }
-              }
-          
-        },
+  }
 
-    });
-
-    Setor.associate=Models=>{
-
-        Setor.belongsTo(Models.Filial);
-
-    };
-        
-    return Setor;
+  static associate(models) {
+    this.hasMany(models.Pessoa);
+    this.belongsTo(models.FIlial,{ foreignKey: 'CodFilial', as: 'Filial' });
+  }
 
 }
 
-
-
+export default Setor;

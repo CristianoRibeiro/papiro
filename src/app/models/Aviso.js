@@ -1,42 +1,28 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Aviso=sequelize.define('Aviso',{
 
-        IdAviso:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-        },
-        Aviso:{
-            type:sequelize.STRING(400),
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,400],
-                    msg:"O aviso deve ter entre 1 e 400 caracteres. Favor verificar!"
-                }
-              }
-          
+class Aviso extends Model {
+    static init(sequelize) {
+      super.init(
+        {
+          Aviso: Sequelize.STRING,
+          IsAtivo: Sequelize.BOOLEAN,
+
         },
 
-        IsAtivo:{
-            type:sequelize.BOOLEAN,
-            allowNull:true,
-            defaultValue:true
+        {
+          sequelize,
         }
-
-    });
-
-    Aviso.associate=Models=>{
-
-        Aviso.belongsTo(Models.Usuario);
-
-    };
-        
-    return Aviso;
-
-}
-
+      );
+  
+    }
+  
+    static associate(models) {
+      this.belongsTo(models.Usuario, { foreignKey: 'IdUsuario', as: 'Usuario' });
+    }
+  
+  }
+  
+  export default Aviso;
 
 

@@ -1,29 +1,23 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Cargo=sequelize.define('Cargo',{
+class Cargo extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        DsCargo: Sequelize.STRING
+      },
+      {
+        sequelize,
+      }
+    );
 
-        Id:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-        },
-        DsCargo:{
-            type:sequelize.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,60],
-                    msg:"A descrição de cargo deve ter entre 1 e 60 caracteres. Favor verificar!"
-                }
-              }
-          
-        }
-    });
-        
-    return Cargo;
+  }
+
+  static associate(models) {
+    this.hasMany(models.Pessoa);
+  }
 
 }
 
-
+export default Cargo;
 

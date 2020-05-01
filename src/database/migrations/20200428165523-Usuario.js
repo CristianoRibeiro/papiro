@@ -56,7 +56,7 @@ module.exports = {
   down: (queryInterface, Sequelize) => {
    
     return queryInterface.dropTable('Usuario');
-    
+
         /*
     Papiro, banco modelado e desenvolvido by Tery
     */

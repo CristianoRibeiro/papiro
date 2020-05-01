@@ -1,36 +1,26 @@
-module.exports= (sequelize,DataTypes)=>{
+import Sequelize, { Model } from 'sequelize';
 
-    const Filial=sequelize.define('Filial',{
+class Filial extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        DsFilial: Sequelize.STRING
+      },
+      {
+        sequelize,
+      }
+    );
 
-        IdFilial:{
-            type:DataTypes.UUID,
-            primaryKey:true,
-            defaultValue:DataTypes.UUIDV4,
-            allowNull:false
-        },
-        DsFilial:{
-            type:sequelize.STRING,
-            allowNull:false,
-            validate:{
-                len:{
-                    args:[1,60],
-                    msg:"A descrição de filial deve ter entre 1 e 60 caracteres. Favor verificar!"
-                }
-              }
-          
-        },
+  }
 
-    });
+  static associate(models) {
+    this.hasMany(models.Setor);
 
-    Filial.associate=Models=>{
-
-        Filial.hasMany(Models.Setor);
-
-    };
-        
-    return Filial;
+  }
 
 }
+
+export default Filial;
 
 
 
