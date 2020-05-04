@@ -20,7 +20,7 @@ class Aviso extends Model {
     }
   
     static associate(models) {
-      this.belongsTo(models.Usuario, { foreignKey: 'IdUsuario', as: 'Usuario' });
+      this.belongsTo(models.Usuario, { foreignKey: 'CdUsuario', as: 'Usuario' });
     }
   
   }

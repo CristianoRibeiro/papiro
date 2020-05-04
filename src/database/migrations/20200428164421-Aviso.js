@@ -9,11 +9,13 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull:false,
         autoIncrement:true,
+        autoIncrementIdentity:true,
         primaryKey:true
       },
       Aviso:{
         type:Sequelize.STRING(400),
         allowNull:false,
+        defaultValue:'false',
         len:{
           args:[1,400],
           msg:"A descrição da recompensa deve ter entre 1 e 400 caracteres, favor verificar."

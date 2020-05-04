@@ -6,26 +6,27 @@ module.exports = {
     return  queryInterface.createTable('Mensagem',{
 
       IdMensagem:{
-        type: Sequelize.INTEGER,
         allowNull:false,
+        primaryKey:true,
         autoIncrement:true,
-        primaryKey:true
+        autoIncrementIdentity:true,
+        type: Sequelize.INTEGER
       },
-      Mensagem:{
+      DsMensagem:{
         type:Sequelize.STRING(400),
         allowNull:false,
+        unique:true,
         len:{
           args:[1,400],
-          msg:"A descrição da recompensa deve ter entre 1 e 400 caracteres, favor verificar."
+          msg:'A mensagem deve ter entre 1 e 400 caracteres, favor verificar!'
         }
       },
 
       Up:{
         type:Sequelize.INTEGER,
         allowNull:false,
-        default:0
+        defaultValue:0
       },
-
       CdMsgPai:{
         type:Sequelize.INTEGER,
         allowNull:true
@@ -36,10 +37,10 @@ module.exports = {
         allowNull:false
       },
       updatedAt:{
+        type:Sequelize.DATE,
         allowNull:false
 
-      },
-
+      }
     }
     )
   
@@ -55,3 +56,4 @@ module.exports = {
  
   }
 };
+

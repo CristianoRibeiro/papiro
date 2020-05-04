@@ -21,7 +21,7 @@ return queryInterface.addColumn('Mensagem','CdUsuario',{
 
     return queryInterface.removeColumn(
 
-      'Usuario',
+      'Mensagem',
       'CdUsuario'
     );
         /*

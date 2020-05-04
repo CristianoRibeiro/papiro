@@ -6,7 +6,7 @@ class Mensagem extends Model {
       {
         IdMensagem:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
         DsMensagem: Sequelize.STRING,
-        UP:Sequelize.INTEGER,
+        Up:Sequelize.INTEGER,
         CdMsgPai:Sequelize.INTEGER
       },
       {
@@ -18,7 +18,7 @@ class Mensagem extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Usuario,{foreignKey:'CodUsuario',as:'Usuario'});
+    this.belongsTo(models.Usuario,{foreignKey:'CdUsuario',as:'Usuario'});
 
   }
 }

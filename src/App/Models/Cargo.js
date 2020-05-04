@@ -4,6 +4,7 @@ class Cargo extends Model {
   static init(sequelize) {
     super.init(
       {
+        IdCargo:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
         DsCargo: Sequelize.STRING
       },
       {

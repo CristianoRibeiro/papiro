@@ -8,6 +8,8 @@ module.exports = {
       IdRecompensa:{
         allowNull:false,
         primaryKey:true,
+        autoIncrement:true,
+        autoIncrementIdentity:true,
         type: Sequelize.INTEGER
       },
       DsRecompensa:{
@@ -29,7 +31,8 @@ module.exports = {
         allowNull:true
       },
       DtConclusao:{
-        type:Sequelize.DATE
+        type:Sequelize.DATE,
+        allowNull:true
       },
 
 

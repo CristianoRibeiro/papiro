@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull:false,
         autoIncrement:true,
+        autoIncrementIdentity:true,
         primaryKey:true
       },
       DsSetor:{

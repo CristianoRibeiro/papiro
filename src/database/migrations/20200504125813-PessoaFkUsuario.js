@@ -2,12 +2,12 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-return queryInterface.addColumn('Usuario','CdTipoUsuario',{
+return queryInterface.addColumn('Usuario','CdPessoa',{
   type: Sequelize.INTEGER,
   allowNull:false,
   references:{
-    model:'TipoUsuario',
-    key:'IdTipoUsuario',
+    model:'Pessoa',
+    key:'IdPessoa',
   
   },
 
@@ -22,7 +22,7 @@ return queryInterface.addColumn('Usuario','CdTipoUsuario',{
     return queryInterface.removeColumn(
 
       'Usuario',
-      'CdTipoUsuario'
+      'CdPessoa'
     );
         /*
     Papiro, banco modelado e desenvolvido by Tery
