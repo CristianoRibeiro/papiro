@@ -15,7 +15,6 @@ module.exports = {
       DsSetor:{
         type:Sequelize.STRING(60),
         allowNull:false,
-        unique:true,
         len:{
           args:[1,60],
           msg:"O nome do Setor deve ter entre 1 e 60 caracteres, favor verificar."

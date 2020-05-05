@@ -1,6 +1,5 @@
 import Sequelize from 'sequelize';
 
-import User from '../App/Models/User';
 import Aviso from '../App/Models/Aviso';
 import Cargo from '../App/Models/Cargo';
 import Filial from '../App/Models/Filial';
@@ -14,7 +13,7 @@ import Usuario from '../App/Models/Usuario';
 
 import databaseConfig from '../config/database';
 
-const models=[User,Aviso,Cargo,Filial,Mensagem,Pessoa,Recompensa,Setor,TipoUsuario,Usuario];    
+const models=[Aviso,Cargo,Filial,Mensagem,Pessoa,Recompensa,Setor,TipoUsuario,Usuario];    
 
 class Database{
 

@@ -1,8 +1,5 @@
 import { Router} from 'express';
 
-
-import UserController from './App/Controllers/UserController';
-import SessionController from './App/Controllers/SessionController';
 import FilialController from './App/Controllers/FilialController';
 import Cargo from  './App/Controllers/CargoController';
 import Setor from './App/Controllers/SetorController';
@@ -31,8 +28,6 @@ routes.post('/Setor/teste',Setor.store)
 routes.post('/TipoUsuario/teste',TipoUsuario.store)
 routes.post('/Pessoa/teste',Pessoa.store)
 routes.post('/Usuario/teste',Usuario.store)
-routes.post('/users', UserController.store)
-routes.post('/sessions',SessionController.store)
 
 
 export default routes;  
