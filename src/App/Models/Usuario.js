@@ -8,10 +8,7 @@ class Usuario extends Model {
         Usuario: Sequelize.STRING,
         senhaHash: Sequelize.STRING,
         Senha:Sequelize.VIRTUAL,
-        Pontuacao:Sequelize.FLOAT,
         IsAtivo:Sequelize.BOOLEAN,
-
-
 
       },
       {
@@ -27,8 +24,11 @@ class Usuario extends Model {
     this.hasMany(models.Aviso);
     this.hasMany(models.Recompensa);
     this.hasMany(models.Mensagem);
-    this.belongsTo(models.TipoUsuario,{foreignKey:'CdTipoUsuario',as:'TipoUsuario'})
-    this.belongsTo(models.Pessoa,{foreignKey:'CdPessoa',as:'Pessoa'})
+    this.belongsTo(models.TipoUsuario,{foreignKey:'CdTipoUsuario',as:'TipoUsuario'});
+    this.belongsTo(models.Pessoa,{foreignKey:'CdPessoa',as:'Pessoa'});
+    this.belongsTo(models.Conquista,{through:'ConquistasUsuario', foreignKey:'CodUsuario',as:"Conquistas" });
+ 
+
   }
 
 }

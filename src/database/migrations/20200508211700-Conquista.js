@@ -3,23 +3,36 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-    return  queryInterface.createTable('TipoUsuario',{
+    return  queryInterface.createTable('Conquista',{
 
-      IdTipoUsuario:{
+      IdConquista:{
         type: Sequelize.INTEGER,
         allowNull:false,
         autoIncrement:true,
         autoIncrementIdentity:true,
         primaryKey:true
       },
-      DsTipoUsuario:{
-        type:Sequelize.STRING(50),
+
+      NoConquista:{
+        type:Sequelize.STRING(100),
         allowNull:false,
         unique:true,
-        len:{
-          args:[1,30],
-          msg:"O nome do cargo deve ter entre 1 e 50, favor verificar."
-        }
+               
+      },
+      DsConquista:{
+        type:Sequelize.STRING(100),
+        allowNull:false,
+        unique:true,
+               
+      },
+      ValorConquista:{
+        type:Sequelize.INTEGER,
+        allowNull:false
+      },
+
+      DuracaoPrevista:{
+        type:Sequelize.DATE,
+        allowNull:true
       },
       createdAt:{
         type:Sequelize.DATE,
@@ -32,7 +45,13 @@ module.exports = {
         defaultValue:new Date()
 
       },
-  
+
+      IsAtivo:{
+        type:Sequelize.BOOLEAN,
+        allowNull:false,
+        defaultValue:'false'
+      },
+
     }
     )
   
@@ -40,7 +59,7 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
    
-    return queryInterface.dropTable('TipoUsuario');
+    return queryInterface.dropTable('Conquista');
     
         /*
     Papiro, banco modelado e desenvolvido by Tery

@@ -25,12 +25,6 @@ module.exports = {
         type:Sequelize.STRING
         },
 
-      Pontuacao:{
-        type:Sequelize.INTEGER,
-        allowNull:false,
-        defaultValue:0
-        
-      },
     
       IsAtivo:{
         type:Sequelize.BOOLEAN,
@@ -41,11 +35,13 @@ module.exports = {
 
       createdAt:{
         type:Sequelize.DATE,
-        allowNull:false
+        allowNull:false,
+        defaultValue:new Date()
       },
       updatedAt:{
         type:Sequelize.DATE,
-        allowNull:false
+        allowNull:false,
+        defaultValue:new Date()
 
       },
 
