@@ -9,6 +9,12 @@ async store(req,res){
     return res.json(aviso);
 
 }
+    
+async ObterTodosAvisos(req,res){
+   
+    const ListaAviso=await Aviso.findAll();
+    return   res.json(ListaAviso);
+}
 }
 
 export default new AvisoController();  

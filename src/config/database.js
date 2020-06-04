@@ -3,7 +3,7 @@ module.exports={
     host:'192.168.99.100',
     username:'postgres',
     password:'oak',
-    database:'GoBarber',
+    database:'PapiroDb',
     define:{
         timestamp:true,
        freezeTableName: true

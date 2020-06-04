@@ -18,7 +18,8 @@ routes.get('/', (req,res)=>{
 return res.send("Hello bitche");
 
 })
-
+routes.get('/User/Username/Id',Usuario.ObterUsuarioNomePorId)
+routes.get('/Aviso/',Aviso.ObterTodosAvisos)
 routes.post('/Aviso/teste', Aviso.store)
 routes.post('/Recompensa/teste', Recompensa.store)
 routes.post('/Mensagem/teste', Mensagem.store)
