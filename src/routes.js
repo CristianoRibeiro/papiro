@@ -18,10 +18,14 @@ routes.get('/', (req,res)=>{
 return res.send("Hello bitche");
 
 })
+
+routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)
 routes.get('/User/Username/Id',Usuario.ObterUsuarioNomePorId)
+routes.get('/Aviso/ObterAvisosAtivos',Aviso.ObterAvisosAtivos)
 routes.get('/Aviso/',Aviso.ObterTodosAvisos)
-routes.post('/Aviso/teste', Aviso.store)
+routes.post('/Aviso/Cadastrar', Aviso.store)
 routes.post('/Recompensa/teste', Recompensa.store)
+routes.get('/Recompensa/ObterTop3Recompensas', Recompensa.ObterAs3MaioresRecompensasAtivas)
 routes.post('/Mensagem/teste', Mensagem.store)
 routes.post('/Filial/teste', FilialController.store)
 routes.post('/Cargo/teste',Cargo.store)

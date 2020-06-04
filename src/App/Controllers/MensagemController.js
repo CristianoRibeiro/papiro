@@ -9,6 +9,20 @@ async store(req,res){
     return res.json(mensagem);
 
 }
+
+async ObterTop3Mensagens(req,res){
+    
+    const mensagens=await Mensagem.findAll({
+    limit:3,
+     where:{"CdMsgPai":null},
+      order:[['Up','DESC']]
+    })
+
+    return res.json(mensagens);
 }
+
+}
+
+
 
 export default new MensagemController();  
