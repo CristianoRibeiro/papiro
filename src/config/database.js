@@ -1,9 +1,9 @@
 module.exports={
     dialect:'postgres',
-    host:'192.168.99.100',
+    host:'localhost',
     username:'postgres',
-    password:'oak',
-    database:'PapiroDb',
+    password:'docker',
+    database:'papiro_api',
     define:{
         timestamp:true,
        freezeTableName: true
