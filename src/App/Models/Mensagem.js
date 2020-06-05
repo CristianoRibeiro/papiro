@@ -5,6 +5,7 @@ class Mensagem extends Model {
     super.init(
       {
         IdMensagem:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
+        TituloMensagem:Sequelize.STRING,
         DsMensagem: Sequelize.STRING,
         Up:Sequelize.INTEGER,
         CdMsgPai:Sequelize.INTEGER
