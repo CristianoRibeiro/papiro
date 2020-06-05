@@ -6,6 +6,7 @@ class Aviso extends Model {
       super.init(
         {
           IdAviso:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
+          TituloAviso:Sequelize.STRING,
           Aviso: Sequelize.STRING,
           IsAtivo: Sequelize.BOOLEAN,
 

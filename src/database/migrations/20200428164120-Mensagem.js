@@ -12,6 +12,15 @@ module.exports = {
         autoIncrementIdentity:true,
         type: Sequelize.INTEGER
       },
+      TituloMensagem:{
+        type:Sequelize.STRING(30),
+        allowNull:true,
+        len:{
+          args:[1,30],
+          msg:'A mensagem deve ter entre 1 e 30 caracteres, favor verificar!'
+        }
+      },
+
       DsMensagem:{
         type:Sequelize.STRING(400),
         allowNull:false,

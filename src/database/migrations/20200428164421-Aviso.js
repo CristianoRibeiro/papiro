@@ -12,6 +12,15 @@ module.exports = {
         autoIncrementIdentity:true,
         primaryKey:true
       },
+      
+      TituloAviso:{
+        type: Sequelize.STRING,
+        allowNull:false,
+        len:{
+          args:[1,30],
+          msg:"O título de aviso deve ter entre 1 e 30 caracteres, favor verificar."
+        }
+      },
       Aviso:{
         type:Sequelize.STRING(400),
         allowNull:false,
