@@ -4,7 +4,10 @@ class TipoUsuario extends Model {
   static init(sequelize) {
     super.init(
       {
-        IdTipoUsuario:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
+        IdTipoUsuario:{
+          type: Sequelize.INTEGER,
+          primaryKey: true
+        },
         DsTipoUsuario: Sequelize.STRING
       },
       {

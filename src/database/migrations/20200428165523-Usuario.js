@@ -12,7 +12,7 @@ module.exports = {
         autoIncrementIdentity:true,
         primaryKey:true
       },
-      Usuario:{
+      username:{
         type:Sequelize.STRING(20),
         allowNull:false,
         len:{
@@ -32,7 +32,21 @@ module.exports = {
         defaultValue:true
       },
 
+      CdTipoUsuario: {
+        type: Sequelize.INTEGER,
+        references: { model: 'TipoUsuario', key: 'IdTipoUsuario' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true,
+      },
 
+      CdPessoa: {
+        type: Sequelize.INTEGER,
+        references: { model: 'Pessoa', key: 'IdPessoa' },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: true,
+      },
       createdAt:{
         type:Sequelize.DATE,
         allowNull:false,

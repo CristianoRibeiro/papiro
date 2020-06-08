@@ -4,7 +4,10 @@ class Pessoa extends Model {
   static init(sequelize) {
     super.init(
       {
-        IdPessoa:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
+        IdPessoa:{
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+        },
         NoPessoa: Sequelize.STRING,
         CPF:Sequelize.STRING,
         Email:Sequelize.STRING,

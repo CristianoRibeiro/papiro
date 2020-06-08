@@ -5,7 +5,7 @@ module.exports = {
   
  [
   {
-    Usuario:'Luis.Alves',
+    username:'Luis.Alves',
     senhaHash:'12345',
     CdTipoUsuario:'1',
     CdPessoa:'1',
@@ -13,7 +13,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Cristiano.Ribeiro',
+    username:'Cristiano.Ribeiro',
     senhaHash:'12345',
     CdTipoUsuario:'1',
     CdPessoa:'2',
@@ -21,7 +21,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Cisco.Danúbio',
+    username:'Cisco.Danúbio',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'3',
@@ -29,7 +29,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Joana.Prado',
+    username:'Joana.Prado',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'4',
@@ -37,7 +37,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Paulo.Braga',
+    username:'Paulo.Braga',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'5',
@@ -45,7 +45,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Jessica.Alboquerque',
+    username:'Jessica.Alboquerque',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'6',
@@ -53,7 +53,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Ricardo.Fictício',
+    username:'Ricardo.Fictício',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'7',
@@ -61,7 +61,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Caio.Fictício',
+    username:'Caio.Fictício',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'8',
@@ -69,15 +69,14 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-  Usuario:'Renaldo.Fictício',
+  username:'Renaldo.Fictício',
   senhaHash:'12345',
   CdTipoUsuario:'4',
   CdPessoa:'9',
   createdAt:new Date(),
   updatedAt:new Date(),
   },
-  {
-    Usuario:'Rafael.Fictício',
+  {username:'Rafael.Fictício',
     senhaHash:'12345',
     CdTipoUsuario:'4',
     CdPessoa:'10',
@@ -85,7 +84,7 @@ module.exports = {
     updatedAt:new Date(),
     },
     {
-      Usuario:'Vinícius.Fictício',
+      username:'Vinícius.Fictício',
       senhaHash:'12345',
       CdTipoUsuario:'4',
       CdPessoa:'11',
@@ -93,7 +92,7 @@ module.exports = {
       updatedAt:new Date(),
   },
   {
-    Usuario:'Mr.Gerente',
+    username:'Mr.Gerente',
     senhaHash:'12345',
     CdTipoUsuario:'3',
     CdPessoa:'12',
@@ -101,7 +100,7 @@ module.exports = {
     updatedAt:new Date(),
   },
   {
-    Usuario:'Ms.Gerente',
+    username:'Ms.Gerente',
     senhaHash:'12345',
     CdTipoUsuario:'3',
     CdPessoa:'13',
@@ -109,7 +108,7 @@ module.exports = {
     updatedAt:new Date(),
 },
 {
-  Usuario:'Marta.Fictícia',
+  username:'Marta.Fictícia',
   senhaHash:'12345',
   CdTipoUsuario:'2',
   CdPessoa:'14',
@@ -117,7 +116,7 @@ module.exports = {
   updatedAt:new Date(),
 },
 {
-  Usuario:'Cristiane.Fictícia',
+  username:'Cristiane.Fictícia',
   senhaHash:'12345',
   CdTipoUsuario:'2',
   CdPessoa:'15',
@@ -125,7 +124,7 @@ module.exports = {
   updatedAt:new Date(),
 },
 {
-  Usuario:'João.Fictícia',
+  username:'João.Fictícia',
   senhaHash:'12345',
   CdTipoUsuario:'2',
   CdPessoa:'14',

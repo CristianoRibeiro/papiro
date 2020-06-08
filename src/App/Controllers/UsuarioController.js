@@ -4,11 +4,20 @@ class UsuarioController{
 
 async store(req,res){
    
-    const usuario= Usuario.create(req.body);
+    
+    const userAlredyExist = await Usuario.findOne({where:{Usuario:req.body.usuario }});
+    return res.json(userAlredyExist);
+    
+    // if(userAlredyExist) {
+    //     return res.status(400).json({error:"E-mail já cadastrado para outro usuário, favor verificar!"});
+    // }
 
-    return res.json(usuario);
+   
+    // const usuario= Usuario.create(req.body);
+    // return res.json(usuario);
+    
 
-}
+};
 
 async ObterUsuarioNomePorId(req,res){
 
