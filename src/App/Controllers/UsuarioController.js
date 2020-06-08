@@ -1,20 +1,21 @@
 import Usuario from '../Models/Usuario';
+import bcrypt from 'bcryptjs';
 
 class UsuarioController{
 
 async store(req,res){
    
     
-    const userAlredyExist = await Usuario.findOne({where:{Usuario:req.body.usuario }});
-    return res.json(userAlredyExist);
+    const userAlredyExist = await Usuario.findOne({where:{username:req.body.username }});
     
-    // if(userAlredyExist) {
-    //     return res.status(400).json({error:"E-mail já cadastrado para outro usuário, favor verificar!"});
-    // }
+    if(userAlredyExist) {
+        return res.status(400).json({error:"Usuário já cadastrado para outro usuário, favor verificar!"});
+    }
 
+    // return res.json(req.body);
    
-    // const usuario= Usuario.create(req.body);
-    // return res.json(usuario);
+    const usuario= Usuario.create(req.body);
+    return res.json({message: "Success"});
     
 
 };

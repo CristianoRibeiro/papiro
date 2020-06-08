@@ -25,7 +25,7 @@ class Pessoa extends Model {
   static associate(models) {
     this.belongsTo(models.Setor,{foreignKey:'CodSetor',as:'Setor'});
     this.belongsTo(models.Cargo,{foreignKey:'CodCargo',as:'Cargo'});
-    this.hasOne(models.Usuario)
+    // this.hasOne(models.Usuario)
   }
 
 }
