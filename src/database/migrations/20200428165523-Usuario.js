@@ -31,22 +31,7 @@ module.exports = {
         allowNull:false,
         defaultValue:true
       },
-
-      CdTipoUsuario: {
-        type: Sequelize.INTEGER,
-        references: { model: 'TipoUsuario', key: 'IdTipoUsuario' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        allowNull: true,
-      },
-
-      CdPessoa: {
-        type: Sequelize.INTEGER,
-        references: { model: 'Pessoa', key: 'IdPessoa' },
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL',
-        allowNull: true,
-      },
+    
       createdAt:{
         type:Sequelize.DATE,
         allowNull:false,
