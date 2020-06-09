@@ -1,5 +1,7 @@
 import { Router} from 'express';
 
+import authMiddleware from './app/middlewares/auth';
+
 import FilialController from './App/Controllers/FilialController';
 import Cargo from  './App/Controllers/CargoController';
 import Setor from './App/Controllers/SetorController';
@@ -24,8 +26,12 @@ return res.send("Hello bitche");
 
 routes.post('/sessions',Session.store)
 
-
 routes.post('/Usuario',Usuario.store)
+
+routes.use(authMiddleware);
+
+routes.put('/Usuario',Usuario.update)
+
 
 routes.get('/User/Username/Id',Usuario.ObterUsuarioNomePorId)
 

@@ -20,6 +20,11 @@ async store(req,res){
 
 };
 
+
+async update(req, res) {
+    return res.json({message: 'ok'})
+}
+
 async ObterUsuarioNomePorId(req,res){
 
     const usuario= await Usuario.findOne({where:{IdUsuario:1},attributes:['Usuario', ]})
