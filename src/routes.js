@@ -40,8 +40,11 @@ routes.post('/TipoUsuario/teste',TipoUsuario.store)
 routes.post('/Pessoa/teste',Pessoa.store)
 
 
+routes.get('/Mensagem',Mensagem.index)
+
+
 routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)
-routes.post('/Mensagem/teste', Mensagem.store)
+routes.post('/Mensagem', Mensagem.store)
 
 routes.get('/Aviso/ObterAvisosAtivos',Aviso.ObterAvisosAtivos)
 routes.get('/Aviso/',Aviso.ObterTodosAvisos)
