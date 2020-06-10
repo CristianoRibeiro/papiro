@@ -7,6 +7,7 @@ module.exports = {
   {
     username:'Luis.Alves',
     senhaHash:'12345',
+    Pontuacao:'15',
     CdTipoUsuario:'1',
     CdPessoa:'1',
     createdAt:new Date(),
@@ -15,6 +16,7 @@ module.exports = {
   {
     username:'Cristiano.Ribeiro',
     senhaHash:'12345',
+    Pontuacao:'36',
     CdTipoUsuario:'1',
     CdPessoa:'2',
     createdAt:new Date(),
@@ -23,6 +25,7 @@ module.exports = {
   {
     username:'Cisco.Danúbio',
     senhaHash:'12345',
+    Pontuacao:'42',
     CdTipoUsuario:'4',
     CdPessoa:'3',
     createdAt:new Date(),
@@ -31,6 +34,7 @@ module.exports = {
   {
     username:'Joana.Prado',
     senhaHash:'12345',
+    Pontuacao:'18',
     CdTipoUsuario:'4',
     CdPessoa:'4',
     createdAt:new Date(),
@@ -39,6 +43,7 @@ module.exports = {
   {
     username:'Paulo.Braga',
     senhaHash:'12345',
+    Pontuacao:'22',
     CdTipoUsuario:'4',
     CdPessoa:'5',
     createdAt:new Date(),
@@ -47,6 +52,7 @@ module.exports = {
   {
     username:'Jessica.Alboquerque',
     senhaHash:'12345',
+    Pontuacao:'27',
     CdTipoUsuario:'4',
     CdPessoa:'6',
     createdAt:new Date(),
@@ -55,6 +61,7 @@ module.exports = {
   {
     username:'Ricardo.Fictício',
     senhaHash:'12345',
+    Pontuacao:'88',
     CdTipoUsuario:'4',
     CdPessoa:'7',
     createdAt:new Date(),
@@ -63,6 +70,7 @@ module.exports = {
   {
     username:'Caio.Fictício',
     senhaHash:'12345',
+    Pontuacao:'19',
     CdTipoUsuario:'4',
     CdPessoa:'8',
     createdAt:new Date(),
@@ -71,6 +79,7 @@ module.exports = {
   {
   username:'Renaldo.Fictício',
   senhaHash:'12345',
+  Pontuacao:'7',
   CdTipoUsuario:'4',
   CdPessoa:'9',
   createdAt:new Date(),
@@ -78,6 +87,7 @@ module.exports = {
   },
   {username:'Rafael.Fictício',
     senhaHash:'12345',
+    Pontuacao:'4',
     CdTipoUsuario:'4',
     CdPessoa:'10',
     createdAt:new Date(),
@@ -86,6 +96,7 @@ module.exports = {
     {
       username:'Vinícius.Fictício',
       senhaHash:'12345',
+      Pontuacao:'0',
       CdTipoUsuario:'4',
       CdPessoa:'11',
       createdAt:new Date(),
@@ -94,6 +105,7 @@ module.exports = {
   {
     username:'Mr.Gerente',
     senhaHash:'12345',
+    Pontuacao:'2',
     CdTipoUsuario:'3',
     CdPessoa:'12',
     createdAt:new Date(),
@@ -102,6 +114,7 @@ module.exports = {
   {
     username:'Ms.Gerente',
     senhaHash:'12345',
+    Pontuacao:'2',
     CdTipoUsuario:'3',
     CdPessoa:'13',
     createdAt:new Date(),
@@ -110,6 +123,7 @@ module.exports = {
 {
   username:'Marta.Fictícia',
   senhaHash:'12345',
+  Pontuacao:'40',
   CdTipoUsuario:'2',
   CdPessoa:'14',
   createdAt:new Date(),
@@ -118,6 +132,7 @@ module.exports = {
 {
   username:'Cristiane.Fictícia',
   senhaHash:'12345',
+  Pontuacao:'17',
   CdTipoUsuario:'2',
   CdPessoa:'15',
   createdAt:new Date(),
@@ -126,6 +141,7 @@ module.exports = {
 {
   username:'João.Fictícia',
   senhaHash:'12345',
+  Pontuacao:'25',
   CdTipoUsuario:'2',
   CdPessoa:'14',
   createdAt:new Date(),
