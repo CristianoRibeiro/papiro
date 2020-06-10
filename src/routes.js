@@ -46,12 +46,13 @@ routes.get('/Mensagem',Mensagem.index)
 
 routes.get('/Mensagem/Comentarios',Mensagem.comentarios)
 
-
+routes.put('/Mensagem/Up', Mensagem.likeUp)
 
 
 
 routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)
 routes.post('/Mensagem', Mensagem.store)
+
 
 routes.get('/Aviso/ObterAvisosAtivos',Aviso.ObterAvisosAtivos)
 routes.get('/Aviso/',Aviso.ObterTodosAvisos)

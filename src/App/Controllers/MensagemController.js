@@ -67,6 +67,16 @@ async comentarios(req, res) {
 }
 
 
+async likeUp(req, res) {
+    const id = parseInt(req.query.id);
+    console.log(ires.body.Upd)
+
+    // const like = await Mensagem.update({
+    //     up: res.body.Up
+    // });
+}
+
+
 
 async ObterTop3Mensagens(req,res){
     
