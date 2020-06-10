@@ -22,9 +22,9 @@ async store(req,res){
 
 async ObterUsuarioNomePorId(req,res){
 
-    const usuario= await Usuario.findOne({where:{IdUsuario:1},attributes:['Usuario', ]})
+    const usuario= await Usuario.findOne({where:{IdUsuario:1},attributes:['username' ]})
 
-    return res.json(usuario.Usuario);
+    return res.json(usuario.username);
 
 }
 

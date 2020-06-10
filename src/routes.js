@@ -11,6 +11,7 @@ import Pessoa from './App/Controllers/PessoaController';
 import Mensagem from './App/Controllers/MensagemController';
 import Recompensa from './App/Controllers/RecompensaController';
 import Aviso from './App/Controllers/AvisoController';
+import Conquista from './App/Controllers/ConquistaController';
 
 
 const routes=new Router();
@@ -43,6 +44,11 @@ routes.post('/Aviso/Cadastrar', Aviso.store)
 
 routes.post('/Recompensa/teste', Recompensa.store)
 routes.get('/Recompensa/ObterTop3Recompensas', Recompensa.ObterAs3MaioresRecompensasAtivas)
+routes.get('/Recompensa/ListarRecompensas',Recompensa.ObterRecompensasAtivas)
+routes.get('/Recompensa/UltimaRecompensaConcluida',Recompensa.UltimaRecompensaConcluida)
+
+routes.post('/Conquista/ConsultarConquistaPorFiltro/',Conquista.ConsultarConquistaPorFiltro)
+
 
 routes.post('/Filial/teste', FilialController.store)
 
