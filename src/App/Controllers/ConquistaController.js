@@ -1,7 +1,7 @@
 import Conquista1 from '../Models/Conquista';
 
 
-class ConquistaController{zzz
+class ConquistaController{
 
 async store(req,res){
    
@@ -18,8 +18,8 @@ async ConsultarConquistaPorFiltro(req,res){
         ValorConquista:req.body.ValorConquista,
         DataInício:req.body.DataInício,
         Status:req.body.Status
-    }
-    const conquitas=await Conquista1.findAll();
+    }   
+    const conquitas=await Conquista.findAll();
     return res.json(conquitas);
 }
 

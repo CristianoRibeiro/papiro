@@ -13,6 +13,7 @@ class Usuario extends Model {
         username: Sequelize.STRING,
         senhaHash: Sequelize.STRING,
         Senha:Sequelize.VIRTUAL,
+        Pontuacao:Sequelize.INTEGER,
         IsAtivo:Sequelize.BOOLEAN,
       },
       {

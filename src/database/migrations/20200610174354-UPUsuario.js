@@ -3,40 +3,38 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-    return  queryInterface.createTable('Usuario',{
+    return  queryInterface.createTable('UPUsuario',{
 
-      IdUsuario:{
+      IdUPUsuario:{
         type: Sequelize.INTEGER,
         allowNull:false,
         autoIncrement:true,
         autoIncrementIdentity:true,
         primaryKey:true
       },
-      username:{
-        type:Sequelize.STRING(20),
-        allowNull:false,
-        len:{
-          args:[1,20],
-          msg:"O nome de usuário deve ter entre 1 e 20 caracteres, favor verificar."
-        }
-      },
-      senhaHash:{
-        allowNull:false,
-        type:Sequelize.STRING
-        },
-        Pontuacao:{
+      CdUsuario:{
+        
+          type: Sequelize.INTEGER,
           allowNull:false,
-          type:Sequelize.INTEGER,
-          defaultValue:0
-
-        },
-    
-      IsAtivo:{
-        type:Sequelize.BOOLEAN,
-        allowNull:false,
-        defaultValue:true
+          references:{
+            model:'Usuario',
+            key:'IdUsuario',
+          
+          },
+ 
       },
-    
+      CdMensagem:{
+        
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:'Mensagem',
+          key:'IdMensagem',
+        
+        },
+
+    },
+
       createdAt:{
         type:Sequelize.DATE,
         allowNull:false,
@@ -47,8 +45,7 @@ module.exports = {
         allowNull:false,
         defaultValue:new Date()
 
-      },
-
+      },  
     }
     )
   
@@ -56,8 +53,8 @@ module.exports = {
 
   down: (queryInterface, Sequelize) => {
    
-    return queryInterface.dropTable('Usuario');
-
+    return queryInterface.dropTable('UPUsuario');
+    
         /*
     Papiro, banco modelado e desenvolvido by Tery
     */
