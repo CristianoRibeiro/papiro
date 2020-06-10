@@ -5,16 +5,13 @@ class UPUsuario extends Model {
     static init(sequelize) {
       super.init(
         {
-            IdUPUsuario:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true}
-  
+            IdUPUsuario:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true,autoIncrementIdentity:true},
         },
-
         {
           sequelize,
         }
       );
       return this;
-  
     }
   
     static associate(models) {

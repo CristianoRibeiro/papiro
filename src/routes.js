@@ -14,6 +14,8 @@ import Mensagem from './App/Controllers/MensagemController';
 import Recompensa from './App/Controllers/RecompensaController';
 import Aviso from './App/Controllers/AvisoController';
 import Conquista from './App/Controllers/ConquistaController';
+import UPUsuario from './App/Controllers/UPUsuarioController';
+
 
 
 const routes=new Router();
@@ -43,27 +45,31 @@ routes.post('/Pessoa/teste',Pessoa.store)
 
 
 routes.get('/Mensagem',Mensagem.index)
+routes.post('/Mensagem', Mensagem.store)
 
 routes.get('/Mensagem/Comentarios',Mensagem.comentarios)
 
-routes.put('/Mensagem/Up', Mensagem.likeUp)
+// routes.post('/UPUsuario', UPUsuario.store)
 
 
 
 routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)
-routes.post('/Mensagem', Mensagem.store)
+routes.post('/UPUsuario', Mensagem.upUsuario)
 
 
 routes.get('/Aviso/ObterAvisosAtivos',Aviso.ObterAvisosAtivos)
 routes.get('/Aviso/',Aviso.ObterTodosAvisos)
 routes.post('/Aviso/Cadastrar', Aviso.store)
 
-routes.post('/Recompensa/teste', Recompensa.store)
+routes.post('/Recompensa', Recompensa.store)
 routes.get('/Recompensa/ObterTop3Recompensas', Recompensa.ObterAs3MaioresRecompensasAtivas)
 routes.get('/Recompensa/ListarRecompensas',Recompensa.ObterRecompensasAtivas)
 routes.get('/Recompensa/UltimaRecompensaConcluida',Recompensa.UltimaRecompensaConcluida)
 
 routes.post('/Conquista/ConsultarConquistaPorFiltro/',Conquista.ConsultarConquistaPorFiltro)
+
+routes.post('/Conquista',Conquista.store)
+
 
 
 routes.post('/Filial/teste', FilialController.store)

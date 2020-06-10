@@ -1,11 +1,13 @@
 import Conquista1 from '../Models/Conquista';
 
+import Con from '../Models/ConquistasUsuario'
+
 
 class ConquistaController{
 
 async store(req,res){
    
-    const conquista= Conquista.create(req.body);
+    const conquista = Con.create(req.body);
     
     return res.json(conquista);
 

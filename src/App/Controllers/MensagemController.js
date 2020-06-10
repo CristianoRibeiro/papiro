@@ -2,6 +2,7 @@ import { Op } from 'sequelize';
 
 import Mensagem from '../Models/Mensagem';
 import Usuario from '../Models/Usuario';
+import UPUsuario from '../Models/UPUsuario';
 
 class MensagemController{
 
@@ -67,13 +68,13 @@ async comentarios(req, res) {
 }
 
 
-async likeUp(req, res) {
-    const id = parseInt(req.query.id);
-    console.log(ires.body.Upd)
-
-    // const like = await Mensagem.update({
-    //     up: res.body.Up
-    // });
+async upUsuario(req, res) {
+        const up = await UPUsuario.create(
+          req.body
+        );
+        console.log(up);
+        return res.json({data: up});
+   
 }
 
 
