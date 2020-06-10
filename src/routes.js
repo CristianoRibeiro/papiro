@@ -43,6 +43,9 @@ routes.post('/Pessoa/teste',Pessoa.store)
 
 routes.get('/Mensagem',Mensagem.index)
 
+routes.get('/Mensagem/Comentarios',Mensagem.comentarios)
+
+
 
 
 

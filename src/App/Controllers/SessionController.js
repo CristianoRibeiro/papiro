@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
 import Usuario from '../Models/Usuario';
+import Pessoa from '../Models/Usuario';
+
 import * as Yup from 'yup';
 import authConfig from '../../config/auth';
  
@@ -13,7 +15,18 @@ class SessionController {
    
     const{username,password}=req.body;
     
-    const usuario = await  Usuario.findOne({where:{username}});
+    const usuario = await  Usuario.findOne({
+          where:{username},
+        //   include: [
+        //     {
+        //       model: Pessoa,
+        //       as: 'CdPessoa',
+        //       attributes: ['NoPessoa'],
+            
+        //     },
+        //   ],
+       
+    });
 
     // return res.json({erro: 'sdsdds'})
     
