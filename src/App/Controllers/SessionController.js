@@ -3,7 +3,8 @@ import bcrypt from 'bcryptjs';
 
 import Usuario from '../Models/Usuario';
 import * as Yup from 'yup';
-
+import authConfig from '../../config/auth';
+ 
 
 
 class SessionController {
@@ -27,7 +28,7 @@ class SessionController {
     const { IdUsuario } = usuario;
     return res.json({
         usuario,
-        token:jwt.sign({IdUsuario},'e9a62a5c970dc3970af10c39a4965012',{expiresIn: "1d"}),
+        token:jwt.sign({IdUsuario},authConfig.secret,{expiresIn: authConfig.expiresIn}),
     });
     
 

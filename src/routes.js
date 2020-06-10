@@ -1,5 +1,7 @@
 import { Router} from 'express';
 
+import authMiddleware from './app/middlewares/auth';
+
 import FilialController from './App/Controllers/FilialController';
 import Cargo from  './App/Controllers/CargoController';
 import Setor from './App/Controllers/SetorController';
@@ -25,8 +27,13 @@ return res.send("Hello bitche");
 
 routes.post('/sessions',Session.store)
 
-
 routes.post('/Usuario',Usuario.store)
+
+
+routes.use(authMiddleware);
+
+routes.put('/Usuario',Usuario.update)
+
 
 routes.get('/User/Username/Id',Usuario.ObterUsuarioNomePorId)
 
@@ -35,8 +42,13 @@ routes.post('/TipoUsuario/teste',TipoUsuario.store)
 routes.post('/Pessoa/teste',Pessoa.store)
 
 
+routes.get('/Mensagem',Mensagem.index)
+
+
+
+
 routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)
-routes.post('/Mensagem/teste', Mensagem.store)
+routes.post('/Mensagem', Mensagem.store)
 
 routes.get('/Aviso/ObterAvisosAtivos',Aviso.ObterAvisosAtivos)
 routes.get('/Aviso/',Aviso.ObterTodosAvisos)
