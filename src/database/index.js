@@ -9,6 +9,7 @@ import Recompensa from '../App/Models/Recompensa';
 import Setor from '../App/Models/Setor';
 import TipoUsuario from '../App/Models/TipoUsuario';
 import Usuario from '../App/Models/Usuario';
+import Usuario from '../App/Models/Usuario';
 
 
 import databaseConfig from '../config/database';

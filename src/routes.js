@@ -28,6 +28,7 @@ routes.post('/sessions',Session.store)
 
 routes.post('/Usuario',Usuario.store)
 
+
 routes.use(authMiddleware);
 
 routes.put('/Usuario',Usuario.update)
@@ -41,6 +42,8 @@ routes.post('/Pessoa/teste',Pessoa.store)
 
 
 routes.get('/Mensagem',Mensagem.index)
+
+
 
 
 routes.get('/Mensagem/ObterTop3Mensagens',Mensagem.ObterTop3Mensagens)

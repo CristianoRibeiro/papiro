@@ -8,7 +8,9 @@ async index(req, res){
 
     const mensagens = await Mensagem.findAll({
       
-    //   order: ['createdAt'],
+      order: [
+        ['createdAt', 'DESC'],
+      ],
     //   attributes: ['id', 'date', 'past', 'cancelable'],
       limit: 20,
       offset: (page - 1) * 20,
@@ -17,13 +19,7 @@ async index(req, res){
           model: Usuario,
           as: 'Usuario',
           attributes: ['IdUsuario', 'username'],
-        //   include: [
-        //     {
-        //       model: File,
-        //       as: 'avatar',
-        //       attributes: ['id', 'path', 'url'],
-        //     },
-        //   ],
+        
         },
       ],
     });
