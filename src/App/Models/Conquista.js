@@ -21,13 +21,7 @@ class Conquista extends Model {
       return this;
   
     }
-
-    static associate(models) {
-      
-      this.belongsTo(models.Usuario,{through:'ConquistasUsuario', foreignKey:'CodConquista',as:"ConquistasdeUsuario" });
   
-    }
-
   }
   
   export default Conquista;
